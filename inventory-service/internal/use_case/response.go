@@ -1,9 +1,12 @@
 package use_case
 
 import (
-	"github.com/google/uuid"
 	"inventory-service/internal/inventory"
+
+	"github.com/google/uuid"
 )
+
+// something
 
 type ProductDetail struct {
 	ID        uuid.UUID `json:"id"`
