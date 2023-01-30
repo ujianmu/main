@@ -1,9 +1,10 @@
 package inventory
 
 import (
-	"github.com/google/uuid"
 	"lib"
 	"strings"
+
+	"github.com/google/uuid"
 )
 
 type Product struct {
@@ -59,7 +60,7 @@ func (p *Product) AddStock(quantity int, price float64) error {
 
 func (p *Product) UpdateSalePrice(newSalePrice float64) error {
 	if newSalePrice < p.AveragePrice {
-		return lib.NewErrBadRequest("sale price cannot be less than avg price")
+		return lib.NewErrBadRequest("new sale price cannot be less than avg price")
 	}
 	p.SalePrice = newSalePrice
 	return nil
