@@ -1,9 +1,10 @@
 package inventory
 
 import (
-	"github.com/google/uuid"
 	"lib"
 	"strings"
+
+	"github.com/google/uuid"
 )
 
 type Product struct {
